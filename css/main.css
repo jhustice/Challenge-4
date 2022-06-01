@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: hsl(204, 43%, 93%);
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.container {
+    max-width: 1440px;
+    padding: 7rem 15rem;
+}
+
+.btn {
+    background-color: hsl(71, 73%, 54%);
+    color: hsl(0, 0%, 100%);
+    padding: 0.5rem 4rem;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 3.5rem;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.join {
+    background-color: hsl(0, 0%, 100%);
+    padding: 3rem;
+    border-radius: 12px 12px 0 0;
+    grid-area: join;
+}
+
+.join h1 {
+    color: hsl(179, 62%, 43%);
+    margin-bottom: 0.5rem;
+}
+
+.join h2 {
+    color: hsl(71, 73%, 54%);
+    margin-bottom: 0.5rem;
+}
+
+.join p {
+    color: #ccc;
+    opacity: 0.7;
+}
+
+.monthly {
+    background-color: hsl(179, 62%, 43%);
+    padding: 3rem;
+    color: hsl(0, 0%, 100%);
+    border-radius: 0 0 0 12px;
+    grid-area: monthly;
+}
+
+.monthly h2 {
+    margin-bottom: 0.5rem;
+}
+
+.monthly p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+}
+
+.monthly .dolls {
+    font-size: 35px;
+}
+
+.monthly .per {
+    opacity: 0.6;
+    text-align: center;
+}
+
+.why {
+    background-color: hsl(180, 52%, 58%);
+    padding: 3rem;
+    color: hsl(0, 0%, 100%);
+    border-radius: 0 0 12px 0;
+    grid-area: why;
+}
+
+.why h2 {
+    margin-bottom: 1rem;
+}
+
+.why p {
+    color: #fff;
+    opacity: 0.7;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas:
+        'join join'
+        'monthly why';
+}
+
+@media(max-width: 768px) {
+    .grid {
+        grid-template-areas:
+            'join''monthly'
+            'why';
+    }
+
+    .monthly {
+        border-radius: 0;
+    }
+
+    .why {
+        border-radius: 0 0 8px 8px;
+    }
+
+    .btn {
+        padding: 0.5rem 2rem;
+        margin-top: 1.9rem;
+    }
+}
+
+
+@media(max-width: 500px) {
+    .grid {
+        grid-template-areas:
+            'join'
+            'monthly'
+            'why';
+    }
+
+    .container {
+        padding: 4rem 3rem;
+    }
+
+    .join {
+        padding: 1.5rem;
+    }
+
+    .monthly {
+        border-radius: 0;
+        padding: 1.5rem;
+    }
+
+    .why {
+        border-radius: 0 0 8px 8px;
+        padding: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.5rem 2rem;
+        margin-top: 1.9rem;
+    }
+}
